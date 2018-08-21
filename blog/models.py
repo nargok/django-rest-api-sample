@@ -16,4 +16,4 @@ class Entry(models.Model):
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now_add=True)
   status = models.CharField(choices=STATUS_SET, default=STATUS_DRAFT, max_length=8)
-  author = models.ForeignKey(User, related_name='entries' on_delete=models.CASCADE)
+  author = models.ForeignKey(User, related_name='entries', on_delete=models.CASCADE)

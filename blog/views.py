@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets, filters
 
 from .models import User, Entry
-from .serializer import UserSerializer, EntorySerializer
+from .serializer import UserSerializer, EntrySerializer
 
 class UserViewSet(viewsets.ModelViewSet):
   queryset = User.objects.all()
@@ -10,4 +10,4 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class EntryViewSet(viewsets.ModelViewSet):
   queryset = Entry.objects.all()
-  serializer_class = EntorySerializer
+  serializer_class = EntrySerializer

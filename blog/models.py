@@ -4,6 +4,10 @@ class User(models.Model):
   name = models.CharField(max_length=32)
   mail = models.EmailField()
 
+  # Authorの選択肢を key : usernameで出力する
+  def __str__(self):
+    return "{}: {}".format(self.pk, self.name)
+
 class Entry(models.Model):
   STATUS_DRAFT = 'draft'
   STATUS_PUBLIC = 'public'
